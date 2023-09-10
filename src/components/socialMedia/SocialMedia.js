@@ -1,6 +1,6 @@
 import React from "react";
 import "./SocialMedia.scss";
-import {socialMediaLinks} from "../../portfolio";
+import { socialMediaLinks } from "../../portfolio";
 
 export default function socialMedia() {
   if (!socialMediaLinks.display) {
@@ -124,6 +124,18 @@ export default function socialMedia() {
           rel="noopener noreferrer"
         >
           <i className="fab fa-kaggle"></i>
+          <span></span>
+        </a>
+      ) : null}
+
+      {socialMediaLinks.phone ? (
+        <a
+          href={`tel:${socialMediaLinks.gmail}`}
+          className="icon-button phone"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fas fa-phone-alt"></i>
           <span></span>
         </a>
       ) : null}

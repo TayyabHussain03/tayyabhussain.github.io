@@ -1,11 +1,11 @@
 import React from "react";
 import "./GithubProfileCard.scss";
 import SocialMedia from "../../components/socialMedia/SocialMedia";
-import {contactInfo, isHireable} from "../../portfolio";
+import { contactInfo, isHireable } from "../../portfolio";
 import emoji from "react-easy-emoji";
-import {Fade} from "react-reveal";
+import { Fade } from "react-reveal";
 
-export default function GithubProfileCard({prof}) {
+export default function GithubProfileCard({ prof }) {
   if (isHireable) {
     prof.hireable = "Yes";
   } else {
@@ -14,12 +14,9 @@ export default function GithubProfileCard({prof}) {
   return (
     <Fade bottom duration={1000} distance="20px">
       <div className="main" id="contact">
-        <h1 className="prof-title">Reach Out to me!</h1>
+        <h1 className="prof-title">Feel free to contact me!</h1>
         <div className="row">
           <div className="main-content-profile">
-            <div className="blog-header">
-              <p className="subTitle blog-subtitle">{contactInfo.subtitle}</p>
-            </div>
             <h2 className="bio-text">"{emoji(String(prof.bio))}"</h2>
             {prof.location !== null && (
               <div className="location-div">
@@ -56,6 +53,26 @@ export default function GithubProfileCard({prof}) {
             />
           </div>
         </div>
+        {/* <div className="contact-div-main">
+          <div className="contact-header">
+            <h1 className="heading contact-title">{contactInfo.title}</h1>
+            <div className="contact-text-div">
+              <div className="blog-header">
+                <p className="subTitle blog-subtitle">{contactInfo.subtitle}</p>
+              </div>
+              <a className="contact-detail" href="tel:undefined"></a>
+              <br />
+              <a className="contact-detail-email" href="mailto:tayyabfaisal106@gmail.com">tayyabfaisal106@gmail.com</a>
+              <br />
+              <a className="contact-detail-email" href="tel:+923122443270">{contactInfo.number}</a>
+              <br />
+              <br />
+              <div className="social-media-div">
+                <a href="https://github.com/tayyabhussain03" class="icon-button github" target="_blank"><i class="fab fa-github"></i><span></span></a>
+              </div>
+            </div>
+          </div>
+        </div> */}
       </div>
     </Fade>
   );
